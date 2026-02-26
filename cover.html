@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portada • El infierno del mar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="palette">
+
+  <div class="progressBar" aria-hidden="true"><span id="progress" style="width:0%"></span></div>
+
+  <audio id="bgAudio" preload="auto" loop>
+    <source src="assets/ocean.mp3" type="audio/mpeg">
+    <source src="assets/ocean.ogg" type="audio/ogg">
+  </audio>
+
+  <button class="soundFab" id="soundFab" type="button" aria-label="Activar sonido ambiental" title="Sonido ambiental">
+    <span id="soundIcon">🔈</span>
+    <small id="soundTxt">OFF</small>
+  </button>
+
+  <section class="coverHero">
+    <div class="coverBg"
+      style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80');"
+      aria-hidden="true"></div>
+    <div class="coverShade" aria-hidden="true"></div>
+
+    <div class="coverInner reveal in">
+      <div class="coverPill">Instituto Politécnico Industrial de Santiago (IPISA) • Lengua Española • 6to Sec. 2025–2026</div>
+
+      <h1 class="coverTitle">EL INFIERNO<br>DEL MAR</h1>
+      <p class="coverSub">Poema (prosa poética) sobre <b>contaminación marina</b> — <b>José Emilio Pacheco</b></p>
+
+      <div class="coverGrid stagger in">
+        <div class="coverCard">
+          <div class="k">Equipo</div>
+          <div class="v">Liz Marian Bonilla #02<br>Shiara Hilario #12<br>Joelizsa Pichardo #25</div>
+        </div>
+        <div class="coverCard">
+          <div class="k">Fecha / Taller</div>
+          <div class="v">26/02/2025 • 6to de Info</div>
+          <div class="k" style="margin-top:10px;">Maestra</div>
+          <div class="v">Vetzaira Espinosa</div>
+        </div>
+        <div class="coverCard">
+          <div class="k">Dirección</div>
+          <div class="v">Av. Hispanoamericana Km2, Santiago</div>
+          <div class="k" style="margin-top:10px;">Tema</div>
+          <div class="v">Plásticos • metales tóxicos • petróleo</div>
+        </div>
+      </div>
+
+      <div class="coverBtns stagger in">
+        <a class="primaryBtn" href="index.html">Entrar a la infografía ↗</a>
+        <a class="ghostBtn" target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=contaminacion+marina+microplasticos">Videos sugeridos ↗</a>
+      </div>
+
+      <p class="coverNote"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
