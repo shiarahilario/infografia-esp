@@ -964,3 +964,56 @@ body{
   .coverGrid{grid-template-columns: 1fr}
   .coverInner{padding: 20px 6px 36px}
 }
+/* ===== FIX: Glosario (fuente + hover/tooltip) ===== */
+
+/* Mejor tipografía y alineación del glosario */
+.miniPanel-grid{
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(16,58,87,.86);
+  font-weight: 600;
+}
+
+.miniPanel-grid b{
+  font-weight: 900;
+  color: rgba(16,58,87,.92);
+}
+
+/* Palabras "hover" del glosario (Mercurio, Cianuro, etc.) */
+.glosTerm{
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 8px;
+  cursor: help;
+  text-decoration: none; /* ✅ quita apariencia de link */
+  border-bottom: 2px dotted rgba(16,58,87,.35);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.glosTerm:hover{
+  background: rgba(48,123,142,.12);
+  border-bottom-color: rgba(48,123,142,.55);
+  transform: translateY(-1px);
+}
+
+/* Tooltip flotante: que no se corte, que no se salga, que se lea bonito */
+.tipFloat{
+  max-width: 360px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.35;
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+/* Flechita del tooltip (opcional, se ve pro) */
+.tipFloat::after{
+  content:"";
+  position:absolute;
+  left: 14px;
+  top: -8px;
+  width: 14px; height: 14px;
+  background: rgba(16,58,87,.92);
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(255,255,255,.10);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
