@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
+<meta http-equiv="refresh" content="0; url=cover.html">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Infografía • El infierno del mar — José Emilio Pacheco</title>
 
@@ -10,26 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  
 </head>
 
 <body class="palette">
 
-  <!-- Barra de progreso -->
   <div class="progressBar" aria-hidden="true"><span id="progress"></span></div>
 
-  <!-- Audio ambiente (NO autoplay; se activa con el botón) -->
   <audio id="bgAudio" preload="auto" loop>
     <source src="assets/ocean.mp3" type="audio/mpeg">
     <source src="assets/ocean.ogg" type="audio/ogg">
   </audio>
 
-  <!-- Botón flotante de sonido -->
   <button class="soundFab" id="soundFab" type="button" aria-label="Activar sonido ambiental" title="Sonido ambiental">
     <span id="soundIcon">🔈</span>
     <small id="soundTxt">OFF</small>
   </button>
 
-  <!-- “Escenografía” fuera de la infografía (decorativa, no tapa texto) -->
   <div class="scene" aria-hidden="true">
     <div class="scene-waves"></div>
     <div class="scene-oil"></div>
@@ -47,11 +45,9 @@
       <a href="#problematica" data-nav>Problemática</a>
       <a href="#analisis" data-nav>Análisis</a>
       <a href="#interpretacion" data-nav>Interpretación</a>
-      <a href="#recursos" data-nav>Recursos</a>
     </nav>
   </header>
 
-  <!-- Modal de imágenes -->
   <div class="modal" id="imgModal" aria-hidden="true">
     <div class="modalBack" data-close="1"></div>
     <figure class="modalBody" role="dialog" aria-label="Imagen ampliada">
@@ -73,8 +69,8 @@
       <div class="heroIntro-inner">
         <h1>Infografía interactiva</h1>
         <p class="heroIntro-sub">
-          <b>“El infierno del mar”</b> — José Emilio Pacheco. Una denuncia sobre el océano contaminado:
-          metales tóxicos, petróleo y el daño que vuelve a nosotros como salud, economía e injusticia social.
+          <b>“El infierno del mar”</b> — José Emilio Pacheco. El poema denuncia cómo la contaminación del océano
+          afecta la naturaleza y también la vida humana.
         </p>
 
         <div class="heroBadges stagger">
@@ -86,14 +82,12 @@
         <div class="heroMini">
           <div><b>Equipo:</b> Liz Marian Bonilla #02 • Shiara Hilario #12 • Joelizsa Pichardo #25</div>
           <div><b>Fecha:</b> 26/02/2025 • <b>Maestra:</b> Vetzaira Espinosa</div>
-          <div class="heroMini2">
-            <b>Pregunta guía:</b> ¿Qué pasa cuando convertimos el mar en basurero y laboratorio de venenos?
-          </div>
+          <div class="heroMini2"><b>Pregunta guía:</b> ¿Qué pasa cuando convertimos el mar en basurero y laboratorio de venenos?</div>
         </div>
 
         <div class="heroActions stagger">
           <a class="primaryBtn" href="#contexto">Empezar ↓</a>
-          <a class="ghostBtn" href="#recursos">Ver recursos</a>
+          <a class="ghostBtn" href="#analisis">Ver contenido</a>
         </div>
       </div>
     </section>
@@ -114,50 +108,34 @@
         <div class="twoCol">
           <div class="prose">
             <h3>Breve información del autor</h3>
-            <p>
-              José Emilio Pacheco (México, 1939–2014) fue poeta, narrador y ensayista. Su escritura se caracteriza por
-              un lenguaje directo y una mirada crítica: muestra cómo la historia, la política y la vida cotidiana
-              afectan lo humano… y también la naturaleza.
-            </p>
-            <p>
-              En sus textos es frecuente el tema de la <b>responsabilidad</b>: lo que hacemos hoy deja huellas, y esas huellas
-              regresan como consecuencias sociales.
-            </p>
-
+<p>
+José Emilio Pacheco (1939–2014) fue un poeta, narrador y ensayista mexicano.
+Es considerado una de las figuras más importantes de la literatura mexicana contemporánea.
+Recibió numerosos reconocimientos por su aporte al pensamiento cultural de México.
+</p>
             <h3>Situación social y ambiental relacionada</h3>
             <p>
-              El mar sostiene la vida y también trabajos: pesca, turismo, comercio. Pero recibe desechos industriales,
-              plásticos y derrames de petróleo. Esto convierte ecosistemas en zonas frágiles donde los animales mueren,
-              el alimento se contamina y se rompe el equilibrio costero.
-            </p>
-            <p>
-              En el Caribe (y en RD), el problema se siente cuando la basura llega a ríos/cañadas y termina en playas,
-              afectando la salud y la economía.
+              El crecimiento industrial y los residuos humanos han aumentado la contaminación del mar por químicos,
+              petróleo y basura.
             </p>
 
             <h3>Problema ecológico central</h3>
             <p>
-              El poema denuncia que el mar ya no es “purificador”: lo estamos llenando de venenos. Lo que debería ser
-              vida, belleza y alimento se vuelve amenaza.
+              El poema denuncia la contaminación del mar por sustancias tóxicas que dañan la vida marina
+              y también afectan a las personas.
             </p>
 
             <div class="callout">
-              <b>Idea central del contexto:</b> la contaminación del mar es un problema ambiental y social al mismo tiempo.
+              <b>Idea central:</b> El mar deja de ser fuente de vida cuando el ser humano lo convierte en un espacio contaminado.
             </div>
           </div>
 
           <div class="quoteBox">
-            <div class="quoteTag">Fragmentos (citas cortas)</div>
-            <blockquote class="q">
-              “observa lo que desde esta orilla le arrojamos: plomo, cobre, mercurio, cianuro.”
-            </blockquote>
-            <blockquote class="q">
-              “Zarpa y verás los grumos de petróleo…”
-            </blockquote>
-            <blockquote class="q">
-              “infama el vuelo de las aves…”
-            </blockquote>
-            <small class="qNote">Citas breves para fines escolares.</small>
+            <div class="quoteTag">Ideas clave</div>
+
+            <blockquote class="q">El poema presenta al mar como víctima de la acción humana.</blockquote>
+            <blockquote class="q">La contaminación no afecta solo al agua, sino también a los animales y a las personas.</blockquote>
+            <blockquote class="q">La denuncia ecológica también es una denuncia social.</blockquote>
 
             <div class="linkRow stagger">
               <a class="chip" target="_blank" rel="noopener"
@@ -168,22 +146,14 @@
           </div>
         </div>
 
-        <div class="miniPanel">
-          <div class="miniPanel-title">Mini-glosario rápido</div>
-          <div class="miniPanel-grid">
-            <div><b>Mercurio:</b> metal tóxico que afecta sistema nervioso.</div>
-            <div><b>Cianuro:</b> químico venenoso para organismos vivos.</div>
-            <div><b>Grumos de petróleo:</b> manchas que asfixian y pegan en plumas/piel.</div>
-            <div><b>Cadena alimentaria:</b> lo que come el pez termina en nosotros.</div>
-          </div>
-        </div>
-
-        <!-- imágenes debajo del texto -->
         <div class="imgRow stagger">
           <figure class="shot revealUp">
-            <img class="zoomable" src="img/jose.jpg"              alt="José Emilio Pacheco"
+            <img class="zoomable"
+              src="img/jose.jpg"
+              alt="José Emilio Pacheco"
               data-caption="José Emilio Pacheco (autor)"
-              loading="lazy" referrerpolicy="no-referrer"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Autor</figcaption>
           </figure>
@@ -191,14 +161,22 @@
           <figure class="shot revealUp">
             <img class="zoomable"
               src="img/mar.jpg"
-              data-caption="Mar afectado por contaminación"
-              loading="lazy" referrerpolicy="no-referrer"
+              alt="Contaminación marina"
+              data-caption="Contaminación marina"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Contaminación</figcaption>
           </figure>
 
-          <figure class="shot slot revealUp">
-            <img class="zoomable" src="img/contaminacion-uno.jpeg">
+          <figure class="shot revealUp">
+            <img class="zoomable"
+              src="img/contaminacion-uno.jpeg"
+              alt="Tu comunidad"
+              data-caption="Evidencia local"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Tu comunidad</figcaption>
           </figure>
         </div>
@@ -222,74 +200,43 @@
           <div class="prose">
             <h3>¿Qué problema ambiental denuncia el poema?</h3>
             <p>
-              Denuncia la <b>contaminación del mar</b> por sustancias tóxicas y petróleo. El texto no suaviza el problema:
-              usa imágenes duras para que entendamos que el océano se está volviendo un “infierno”.
-            </p>
-            <p>
-              En lectura actual, el mensaje se amplía a plásticos y residuos: todo lo que tiramos “se queda”,
-              se acumula y daña la vida marina.
+              El poema denuncia la contaminación del mar por sustancias tóxicas, petróleo y residuos.
             </p>
 
             <h3>¿A quién afecta?</h3>
             <ul>
-              <li><b>Fauna y flora:</b> muertes, deformaciones, pérdida de hábitat.</li>
-              <li><b>Personas:</b> salud (toxinas), alimentación (pescado), empleo (pesca/turismo).</li>
-              <li><b>Comunidad:</b> playas sucias, gastos en limpieza, pérdida de atractivo.</li>
+              <li>Fauna marina</li>
+              <li>Personas que consumen pescado</li>
+              <li>Comunidades costeras</li>
             </ul>
 
-            <h3>Consecuencias</h3>
+            <h3>¿Cuáles son sus consecuencias?</h3>
             <ul>
-              <li><b>Microtoxinas</b> y metales en la cadena alimentaria.</li>
-              <li><b>Manchas de petróleo</b> que asfixian y dañan aves/peces.</li>
-              <li><b>Impacto económico</b> (menos pesca, menos turismo).</li>
-              <li><b>Impacto social</b>: afecta más a quienes dependen del mar.</li>
+              <li>Muerte de especies marinas</li>
+              <li>Contaminación de alimentos</li>
+              <li>Daños ambientales y económicos</li>
             </ul>
-
-            <h3>Gráfico: impacto estimado</h3>
-            <div class="bars">
-              <div class="bar"><span>Fauna</span><i style="width:88%"></i></div>
-              <div class="bar"><span>Salud</span><i style="width:74%"></i></div>
-              <div class="bar"><span>Economía</span><i style="width:64%"></i></div>
-              <div class="bar"><span>Costas</span><i style="width:58%"></i></div>
-            </div>
 
             <div class="callout">
-              <b>Frase para exponer:</b> “Lo que arrojamos al mar no desaparece: regresa como daño ambiental y social.”
+              <b>Idea clave:</b> Lo que se lanza al mar termina afectando la vida humana.
             </div>
           </div>
 
           <div class="prose">
-            <h3>Acciones concretas (interactivo)</h3>
+            <h3>Acciones concretas</h3>
             <p>
-              Marca las acciones que tu comunidad o escuela puede aplicar. La recomendación cambiará según tu selección.
+              Estas acciones ayudan a reducir la contaminación y a proteger el agua.
             </p>
+
             <div class="checks" id="checklist">
               <label><input type="checkbox" value="plástico"> Reducir plásticos de un solo uso</label>
               <label><input type="checkbox" value="limpieza"> Limpieza de ríos/cañadas/playas</label>
               <label><input type="checkbox" value="reciclaje"> Separar residuos / reciclar</label>
-              <label><input type="checkbox" value="educación"> Educación ambiental comunitaria</label>
-              <label><input type="checkbox" value="denuncia"> Reportar vertidos ilegales / crear campañas</label>
+              <label><input type="checkbox" value="educación"> Educación ambiental</label>
             </div>
+
             <div class="tip" id="resultBox">Marca al menos una acción para ver la recomendación.</div>
 
-            <div class="miniPanel">
-              <div class="miniPanel-title">Acción rápida (para IPISA)</div>
-              <div class="miniPanel-grid">
-                <div>📌 Colocar zafacones separados (orgánico/plástico/otros).</div>
-                <div>📌 Día de limpieza cerca de un punto de agua (si es posible).</div>
-                <div>📌 Afiches con “No tires basura: llega al mar”.</div>
-                <div>📌 Video corto del grupo con un mensaje final.</div>
-              </div>
-            </div>
-
-            <div class="linkRow stagger">
-              <a class="chip" target="_blank" rel="noopener"
-                 href="https://www.youtube.com/results?search_query=contaminacion+marina+pl%C3%A1sticos">📺 Plásticos en el mar ↗</a>
-              <a class="chip" target="_blank" rel="noopener"
-                 href="https://www.youtube.com/results?search_query=derrame+de+petroleo+impacto+ambiental">📺 Derrames de petróleo ↗</a>
-              <a class="chip" target="_blank" rel="noopener"
-                 href="https://www.youtube.com/results?search_query=como+hacer+una+campaña+ambiental+escolar">📺 Campaña escolar ↗</a>
-            </div>
           </div>
         </div>
 
@@ -297,23 +244,33 @@
           <figure class="shot revealUp">
             <img class="zoomable"
               src="img/playas.jpg"
-              alt="Limpieza de playa"
-              data-caption="Acción: limpieza"
-              loading="lazy" referrerpolicy="no-referrer"
+              alt="Acción"
+              data-caption="Acción comunitaria"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Acción</figcaption>
           </figure>
+
           <figure class="shot revealUp">
             <img class="zoomable"
               src="img/Peru-Retail.jpg"
               alt="Petróleo en el mar"
-              data-caption="Riesgo: petróleo"
-              loading="lazy" referrerpolicy="no-referrer"
+              data-caption="Petróleo en el mar"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Petróleo</figcaption>
           </figure>
-          <figure class="shot slot revealUp">
-            <img class="zoomable" src="img/santiagoplayacont.jpg">
+
+          <figure class="shot revealUp">
+            <img class="zoomable"
+              src="img/santiagoplayacont.jpg"
+              alt="Foto local"
+              data-caption="Evidencia local"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Foto local</figcaption>
           </figure>
         </div>
@@ -328,7 +285,7 @@
         <div class="blockShade"></div>
         <div class="blockTitle">
           <h2>Análisis literario</h2>
-          <p>Tema • mensaje • recursos literarios • fragmentos destacados</p>
+          <p>Tema • Mensaje • Recursos literarios • Fragmentos destacados</p>
         </div>
       </header>
 
@@ -337,224 +294,148 @@
           <div class="prose">
             <h3>Tema central</h3>
             <p>
-              La contaminación del mar y la caída de la idea romántica de “mar limpio”. El texto convierte el océano en
-              espejo moral: muestra lo que somos capaces de hacer.
+              La destrucción del mar causada por la contaminación humana.
             </p>
 
             <h3>Mensaje del poema</h3>
             <p>
-              El mensaje es una advertencia: si seguimos arrojando venenos al mar, destruimos la vida marina y
-              terminamos destruyéndonos a nosotros mismos. La naturaleza no es un basurero infinito.
+              El poema advierte que el ser humano está dañando el océano y que ese daño vuelve como problema social y ambiental.
             </p>
 
-            <h3>Recursos literarios (con ejemplos)</h3>
+            <h3>Recursos literarios</h3>
             <ul>
-              <li><b>Enumeración:</b> lista de tóxicos (impacto por acumulación).</li>
-              <li><b>Imágenes sensoriales:</b> “grumos de petróleo” (visual y repulsivo).</li>
-              <li><b>Tono denunciatorio:</b> el texto “confronta” al lector.</li>
-              <li><b>Intertextualidad:</b> referencia cultural (Eurípides) para contrastar mito vs realidad.</li>
+              <li><b>Enumeración:</b> El poema menciona varias sustancias tóxicas para mostrar la gravedad de la contaminación. Ejemplo: “Plomo, cobre, mercurio, cianuro”.</li>
+              <li><b>Imagen sensorial:</b> Describe visualmente los daños causados por el petróleo en el mar.</li>
+              <li><b>Tono denunciatorio:</b> El lenguaje del poema critica directamente la destrucción del océano causada por el ser humano.</li>
             </ul>
 
             <div class="callout">
-              <b>Explicación para exponer:</b> la enumeración funciona como “prueba”: no es una idea abstracta, son venenos reales.
+              <b>Idea clave:</b> El poema usa palabras directas para denunciar el daño ambiental.
             </div>
           </div>
 
           <div class="quoteBox">
-            <div class="quoteTag">Fragmentos (citas cortas)</div>
-            <blockquote class="q">“plomo, cobre, mercurio, cianuro.”</blockquote>
-            <blockquote class="q">“grumos de petróleo…”</blockquote>
-            <blockquote class="q">“infama el vuelo de las aves…”</blockquote>
+            <div class="quoteTag">Fragmentos destacados</div>
+            <blockquote class="q">“Zarpa y verás los grumos de petróleo que han empedrado sus senderos.”</blockquote>
+            <blockquote class="q">“Hoy al matarlo estamos muriendo.”</blockquote>
+            <blockquote class="q">“Cuando haya muerto el mar no tendremos oxígeno.”</blockquote>
+
             <div class="linkRow stagger">
               <a class="chip" target="_blank" rel="noopener"
                  href="https://www.youtube.com/results?search_query=enumeracion+recurso+literario+ejemplos">📺 Enumeración ↗</a>
-              <a class="chip" target="_blank" rel="noopener"
-                 href="https://www.youtube.com/results?search_query=intertextualidad+explicacion">📺 Intertextualidad ↗</a>
             </div>
-          </div>
-        </div>
-
-        <div class="miniPanel">
-          <div class="miniPanel-title">Mapa rápido: “recurso → efecto”</div>
-          <div class="miniPanel-grid">
-            <div><b>Enumeración</b> → sensación de exceso y gravedad.</div>
-            <div><b>Imágenes fuertes</b> → impacto emocional inmediato.</div>
-            <div><b>Tono directo</b> → urgencia / denuncia.</div>
-            <div><b>Contraste mito-realidad</b> → crítica social.</div>
           </div>
         </div>
 
         <div class="imgRow stagger">
           <figure class="shot revealUp">
             <img class="zoomable"
-              src="img/fauna.jpg"
-              alt="Aves"
+              src="img/faunamala.jpg"
+              alt="Fauna afectada"
               data-caption="Ecosistemas afectados"
-              loading="lazy" referrerpolicy="no-referrer"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Fauna</figcaption>
           </figure>
+
           <figure class="shot revealUp">
             <img class="zoomable"
               src="img/basuramarina.jpg"
-              alt="Basura marina"
-              data-caption="Residuos: símbolo del problema"
-              loading="lazy" referrerpolicy="no-referrer"
+              alt="Residuos en el mar"
+              data-caption="Residuos marinos"
+              loading="lazy"
+              referrerpolicy="no-referrer"
               onerror="this.parentElement.classList.add('imgFallback')">
             <figcaption>Residuos</figcaption>
           </figure>
-          
+
+          <figure class="shot revealUp">
+            <img class="zoomable"
+              src="img/marcont.jpg"
+              alt="Contaminación del océano"
+              data-caption="Contaminación del océano"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.parentElement.classList.add('imgFallback')">
+            <figcaption>Impacto visual</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- INTERPRETACIÓN -->
-    <section class="block reveal" id="interpretacion" data-accent="pastel">
+    <section class="block reveal" id="interpretacion">
       <header class="blockHead">
         <div class="blockImg"
           style="background-image:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=2400&q=80');"></div>
         <div class="blockShade"></div>
         <div class="blockTitle">
           <h2>Interpretación personal</h2>
-          <p>Opinión crítica • relación con la comunidad • reflexión sobre impacto social</p>
+          <p>Opinión • Comunidad • Reflexión</p>
         </div>
       </header>
 
       <div class="blockBody">
         <div class="twoCol">
           <div class="prose">
-            <h3>Opinión crítica (integrantes) </h3>
+
+            <h3>Opinión crítica</h3>
+
+            <p><b>Liz Marian:</b> El poema muestra cómo la contaminación afecta al mar y también a la vida humana. Nos hace reflexionar sobre la responsabilidad que tenemos como sociedad para proteger los ecosistemas.</p>
+
+            <p><b>Shiara:</b> El texto enseña que las acciones humanas pueden destruir los ecosistemas cuando no se actúa con conciencia ambiental. También invita a reflexionar sobre nuestras decisiones diarias.</p>
+
+            <p><b>Joelizsa:</b> Este poema es un llamado a cuidar el medio ambiente y reducir la contaminación. Nos recuerda que el mar es una fuente de vida que debemos proteger.</p>
+
+            <h3>Relación con la comunidad</h3>
+
             <p>
-              <b>Liz Marian Bonilla #02:</b> Este poema me impacta porque no “adorna” la realidad: la dice como es.
-              Me hace pensar que el mar no puede defenderse solo. Si nosotros causamos el daño, también nos toca actuar.
-              La contaminación no se ve solo en el agua: se ve en la salud, en el turismo y en la comida.
-            </p>
-            <p>
-              <b>Shiara Hilario #12:</b> Lo más fuerte es entender que el mar recibe todo lo que tiramos.
-              El texto me deja una idea clara: no existe “botar lejos”. Todo termina en algún lugar.
-              Me gustaría que en la escuela se hagan campañas reales, no solo tareas, porque esto afecta a todos.
-            </p>
-            <p>
-              <b>Joelizsa Pichardo #25:</b> Para mí el poema es una advertencia: cuando dañamos el mar,
-              dañamos nuestra propia vida. Me hace reflexionar sobre hábitos pequeños (botellas, fundas, basura en la calle)
-              que parecen “nada”, pero en conjunto se vuelven un problema gigante.
+              En nuestra comunidad también se observan problemas de contaminación, como basura en calles, cañadas y ríos.
+              Estos residuos pueden llegar al mar y afectar los ecosistemas y la salud de las personas.
             </p>
 
-            <h3>Relación con su comunidad</h3>
+            <h3>Reflexión social</h3>
+
             <p>
-              En Santiago, cuando llueve, el agua arrastra basura hacia cañadas y ríos. Esa basura puede llegar al mar.
-              Si las calles se ven sucias, el mar también termina sucio.
+              Cuidar el medio ambiente es una responsabilidad colectiva.
+              Pequeñas acciones como reducir la basura, reciclar y proteger los recursos naturales pueden ayudar a preservar el mar para las futuras generaciones.
             </p>
 
-            <h3>Reflexión sobre el impacto social</h3>
-            <p>
-              La contaminación es una forma de desigualdad: quienes menos contaminan muchas veces sufren más.
-              Por eso, cuidar el mar es también cuidar la justicia, la economía y la salud pública.
-            </p>
+            <figure class="shot revealUp">
+              <img class="zoomable"
+                src="img/3chicas.jpg"
+                alt="Equipo"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('imgFallback')">
+              <figcaption>Equipo</figcaption>
+            </figure>
 
-            <div class="callout">
-              <b>Conclusión personal:</b> el poema convierte la contaminación en un tema de conciencia y responsabilidad colectiva.
-            </div>
           </div>
 
           <div class="prose">
-            <h3>Indicador visual de riesgo</h3>
-            <p>
-              Si aumentan plásticos/vertidos, el riesgo sube: más toxinas, más muerte marina, más daño económico.
-            </p>
-            <div class="meter">
-              <span>BAJO</span>
-              <div class="meterBar"><i style="height:78%"></i></div>
-              <span>ALTO</span>
-            </div>
+            <div class="imgRow imgColumn">
 
-            <div class="miniPanel" style="margin-top:14px;">
-              <div class="miniPanel-title">Compromiso del grupo (relleno útil)</div>
-              <div class="miniPanel-grid">
-                <div>✅ No tirar basura en calles/cañadas.</div>
-                <div>✅ Reutilizar botellas/termos.</div>
-                <div>✅ Separar residuos en casa.</div>
-                <div>✅ Promover un mensaje en redes/curso.</div>
-              </div>
-            </div>
+              <figure class="shot revealUp">
+                <img class="zoomable"
+                  src="img/limpiarsantiago.png"
+                  alt="Acción comunitaria"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('imgFallback')">
+                <figcaption>Acción</figcaption>
+              </figure>
 
-            <div class="linkRow stagger" style="margin-top:14px;">
-              <a class="chip" target="_blank" rel="noopener"
-                 href="https://www.youtube.com/results?search_query=educacion+ambiental+escolar+ideas">📺 Ideas escolares ↗</a>
+              <figure class="shot revealUp">
+                <img class="zoomable"
+                  src="img/img_7650.jpg"
+                  alt="Comunidad"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('imgFallback')">
+                <figcaption>Comunidad</figcaption>
+              </figure>
+
             </div>
           </div>
-        </div>
-
-        <div class="imgRow stagger">
-          <figure class="shot revealUp">
-            <img class="zoomable"
-              src="img/limpiarsantiago.png"
-              alt="Acción"
-              data-caption="Acciones pequeñas = impacto grande"
-              loading="lazy" referrerpolicy="no-referrer"
-              onerror="this.parentElement.classList.add('imgFallback')">
-            <figcaption>Acción</figcaption>
-          </figure>
-          <figure class="shot revealUp">
-            <img class="zoomable"
-              src="img/img_7650.jpg"
-              alt="Comunidad"
-              data-caption="Comunidad y cuidado"
-              loading="lazy" referrerpolicy="no-referrer"
-              onerror="this.parentElement.classList.add('imgFallback')">
-            <figcaption>Comunidad</figcaption>
-          </figure>
-          <figure class="shot slot revealUp">
-            <img class="zoomable" src="img/3chicas.jpg">
-            <figcaption>Equipo</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- RECURSOS -->
-    <section class="block reveal" id="recursos" data-accent="prussian">
-      <header class="blockHead">
-        <div class="blockImg"
-          style="background-image:url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=2400&q=80');"></div>
-        <div class="blockShade"></div>
-        <div class="blockTitle">
-          <h2>Recursos y enlaces</h2>
-          <p>Videos y materiales para ampliar la investigación</p>
-        </div>
-      </header>
-
-      <div class="blockBody">
-        <div class="resGrid">
-          <a class="resCard" target="_blank" rel="noopener"
-             href="https://www.youtube.com/results?search_query=contaminacion+marina+microplasticos">
-            Video: microplásticos ↗
-          </a>
-          <a class="resCard" target="_blank" rel="noopener"
-             href="https://www.youtube.com/results?search_query=metales+pesados+en+el+mar+explicacion">
-            Video: metales pesados ↗
-          </a>
-          <a class="resCard" target="_blank" rel="noopener"
-             href="https://www.youtube.com/results?search_query=derrame+de+petroleo+impacto+ambiental">
-            Video: derrames de petróleo ↗
-          </a>
-          <a class="resCard" target="_blank" rel="noopener"
-             href="https://www.youtube.com/results?search_query=como+hacer+una+campaña+ambiental+escolar">
-            Video: campaña escolar ↗
-          </a>
-        </div>
-
-        <div class="miniPanel" style="margin-top:14px;">
-          <div class="miniPanel-title">Idea final</div>
-          <div class="miniPanel-grid">
-            <div>
-              “El mar no es infinito. Si lo tratamos como basurero, lo convertimos en infierno.
-              La solución empieza por hábitos pequeños y acciones comunitarias.”
-            </div>
-          </div>
-        </div>
-
-        <div class="finePrint">
         </div>
       </div>
     </section>

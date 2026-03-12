@@ -34,17 +34,14 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
     audio.currentTime = 0;
   };
 
-  // Estado inicial: OFF (por defecto)
   const saved = localStorage.getItem(KEY) === "1";
   setUI(false);
 
-  // Si el usuario lo dejó ON antes, intentamos reproducir (puede requerir click si el navegador lo bloquea)
   if(saved){
     tryPlay().then(ok=>{
       if(ok){
         setUI(true);
       }else{
-        // navegador bloqueó: dejamos UI OFF hasta que toque
         localStorage.setItem(KEY, "0");
         setUI(false);
       }
@@ -64,7 +61,6 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
       localStorage.setItem(KEY, "1");
       setUI(true);
     }else{
-      // si falla por políticas, avisamos visual con un pequeño “shake”
       btn.animate([
         {transform:"translateY(0)"},
         {transform:"translateY(-2px)"},
@@ -77,7 +73,6 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
     }
   });
 
-  // Pausa al cambiar de pestaña (mejor UX)
   document.addEventListener("visibilitychange", ()=>{
     if(document.hidden && btn.classList.contains("on")){
       audio.pause();
@@ -132,7 +127,7 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
     entries.forEach(e=>{
       if(e.isIntersecting){
         e.target.classList.add("in");
-        obs.unobserve(e.target); // NO se quita al volver arriba
+        obs.unobserve(e.target);
       }
     });
   }, {threshold: 0.15});
@@ -202,11 +197,10 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
   if(!box || !wrap) return;
 
   const msgs = {
-    plástico: "✅ Excelente: reducir plásticos evita microplásticos. Tip: usa termo y funda reutilizable.",
-    limpieza: "✅ Limpieza ayuda visible. Tip: enfoca en cañadas/puntos de drenaje antes de lluvias.",
-    reciclaje: "✅ Separar residuos reduce lo que llega a ríos. Tip: coloca dos zafacones en casa.",
-    educación: "✅ Educar cambia hábitos. Tip: cartel + mini charla de 1 minuto por curso.",
-    denuncia: "✅ Denunciar vertidos evita daño grande. Tip: reporta y toma evidencia (foto/video)."
+    plástico: "✅ Reduce plásticos de un solo uso.",
+    limpieza: "✅ Organiza limpieza de ríos, cañadas o playas.",
+    reciclaje: "✅ Separa residuos en casa o escuela.",
+    educación: "✅ Promueve educación ambiental."
   };
 
   const update = () => {
@@ -215,81 +209,9 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
       box.textContent = "Marca al menos una acción para ver la recomendación.";
       return;
     }
-    const lines = checked.slice(0,3).map(k => msgs[k] || "✅ Buen paso.");
-    box.innerHTML = lines.join("<br>");
-    box.classList.remove("pulse");
-    void box.offsetWidth;
-    box.classList.add("pulse");
+    box.innerHTML = checked.map(k => msgs[k] || "✅ Buena acción.").join("<br>");
   };
 
   wrap.addEventListener("change", update);
   update();
-})();
-
-/* ========= 7) Tooltips automáticos en glosario ========= */
-(function tooltipsAuto(){
-  const glos = $$(".miniPanel-grid");
-  if(!glos.length) return;
-
-  const dict = [
-    {word:"Mercurio", tip:"Metal tóxico: puede afectar sistema nervioso y desarrollo."},
-    {word:"Cianuro", tip:"Sustancia muy venenosa para organismos vivos."},
-    {word:"Grumos de petróleo", tip:"Mezcla espesa que se pega en plumas/piel y asfixia."},
-    {word:"Cadena alimentaria", tip:"Toxinas suben: del plancton al pez… y al ser humano."}
-  ];
-
-  glos.forEach(panel=>{
-    dict.forEach(({word, tip})=>{
-      const html = panel.innerHTML;
-      const re = new RegExp(`<b>${word}:</b>`, "i");
-      if(re.test(html)){
-        panel.innerHTML = html.replace(
-          re,
-          `<b><span class="tipWord" data-tip="${tip}">${word}</span>:</b>`
-        );
-      }
-    });
-  });
-})();
-
-/* ========= 8) Animación de barras + porcentajes ========= */
-(function animateBars(){
-  const bars = $$(".bar i");
-  if(!bars.length) return;
-
-  bars.forEach(i=>{
-    const parent = i.parentElement;
-    if(!parent.querySelector(".count")){
-      const c = document.createElement("span");
-      c.className = "count";
-      c.textContent = "0%";
-      parent.appendChild(c);
-    }
-  });
-
-  const io = new IntersectionObserver((entries, obs)=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      const i = e.target;
-      const parent = i.parentElement;
-      const c = parent.querySelector(".count");
-      const w = parseFloat(i.style.width) || 0;
-
-      let cur = 0;
-      i.style.width = "0%";
-      c.textContent = "0%";
-
-      const step = () => {
-        cur += Math.max(1, w/35);
-        if(cur >= w) cur = w;
-        i.style.width = cur.toFixed(0) + "%";
-        c.textContent = cur.toFixed(0) + "%";
-        if(cur < w) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-      obs.unobserve(i);
-    });
-  }, {threshold: 0.35});
-
-  bars.forEach(i=> io.observe(i));
 })();
